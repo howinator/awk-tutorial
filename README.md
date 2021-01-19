@@ -122,6 +122,10 @@ awk '{ sum += $4 } END { print sum }' sample.txt
 You can define variables that can be used throughout the program using the `-v` flag.
 For instance, if you wanted to re-use some string, you could do the following.
 
+```bash
+awk -v search_str=a 'BEGIN { print "finding " search_str } $1 ~ search_str { print $0 }' sample.txt
+```
+
 # References
 
 I used a few resources for this tutorial.
